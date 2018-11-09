@@ -15,9 +15,9 @@ from django.http import HttpResponseRedirect
 def index(request):
     return HttpResponse('Hello, welcome to the index page.')
 
-def redirect(request):
-    return HttpResponse(str(request.build_absolute_uri()))
-    
+# def redirect(request):
+#     return HttpResponse(str(request.build_absolute_uri()))
+#
 def spotlogin(request):
     ''' prompts the user to login if necessary and returns
         the user token suitable for use with the spotipy.Spotify
@@ -109,8 +109,8 @@ def finish_spot_auth(request):
         while results['next']:
             results = sp.next(results)
             tracks.extend(results['items']) #tracks is a list
-        values = list();
-        songID = 0;
+        values = list()
+        songID = 0
         for track in tracks:
             song = track['track']
             name = song['name']
@@ -135,7 +135,7 @@ def finish_spot_auth(request):
         return HttpResponseRedirect("http://smalldata411/web/illinois.edu")
     else:
         return HttpResponse("ERROR")
-    return HttpResponse(str(token_info))
+   # return HttpResponse(str(token_info))
     
     
     
@@ -180,7 +180,7 @@ def searchQuery(request):
     try:
         c.execute(sql_syn,[search_value])
         rows = c.fetchall()
-        if (len(rows) != 0)
+        if (len(rows) != 0):
             reponse = HttpResponse(rows)
         response = HttpResponse("No Results")
     except:
