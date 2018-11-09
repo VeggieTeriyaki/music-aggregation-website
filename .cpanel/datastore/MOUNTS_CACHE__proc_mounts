@@ -33,5 +33,9 @@ tmpfs /run/user/2232 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=2
 tmpfs /run/user/1094 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=1094,gid=1096 0 0
 tmpfs /run/user/1093 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=1093,gid=1095 0 0
 tmpfs /run/user/1036 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=1036,gid=1038 0 0
-tmpfs /run/user/1888 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=1888,gid=1889 0 0
 tmpfs /run/user/2164 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=2164,gid=2166 0 0
+tmpfs /run/user/2068 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=2068,gid=2070 0 0
+tmpfs /run/user/1019 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=1019,gid=1021 0 0
+tmpfs /run/user/2279 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=2279,gid=2282 0 0
+tmpfs /run/user/1439 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=1439,gid=1441 0 0
+tmpfs /run/user/1888 tmpfs rw,nosuid,nodev,relatime,size=1579232k,mode=700,uid=1888,gid=1889 0 0
