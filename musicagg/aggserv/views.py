@@ -120,7 +120,7 @@ def finish_spot_auth(request):
             if "'" in name or "'" in artist:
                 continue
             #check if song, artist, and service combination already exist in the DB
-            command  = "SELECT UniqueSongID FROM TopSongsMeta WHERE service = \"Spotify\" and artist = \"" + str(artist) + "\" and title = \"" + str(name) +"\""
+            command  = "SELECT UniqueSongID FROM TopSongsMeta WHERE artist = \"" + str(artist) + "\" and title = \"" + str(name) +"\""
             c.execute(command, [])
             rows = c.fetchall()
             if(len(rows) == 0):
