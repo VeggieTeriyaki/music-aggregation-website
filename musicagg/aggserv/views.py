@@ -88,6 +88,7 @@ def spotlogin(request):
             return HttpResponse("FAILED")
 
 def finish_spot_auth(request):
+    c = connections['default'].cursor()
     client_id = '327541285c7343afbf4822dc9d30ef7f'
     client_secret = '713dbe89b2ea4bd382fb0a7b366a63bb'
     redirect_uri = 'http://smalldata411.web.illinois.edu/redirect'
@@ -120,8 +121,10 @@ def finish_spot_auth(request):
                 continue
             #check if song, artist, and service combination already exist in the DB
             command  = "SELECT UniqueSongID FROM TopSongsMeta WHERE service = \"Spotify\" and artist = \"" + str(artist) + "\" and title = \"" + str(name) +"\""
-            
-            
+            c.execute(command, [])
+            rows = c.fetchall()
+            if(len(rows) == 0):
+                continue
             tuple = "("
             tuple  += "1, "
             tuple += "'Spotify', "
@@ -181,7 +184,7 @@ def searchQuery(request):
         c.execute(sql_syn,[search_value])
         rows = c.fetchall()
         if (len(rows) != 0):
-            reponse = HttpResponse(rows)
+            response = HttpResponse(rows)
         response = HttpResponse("No Results")
     except:
         response = HttpResponse("No Results")
