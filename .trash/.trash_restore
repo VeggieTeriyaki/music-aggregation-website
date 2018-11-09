@@ -1,0 +1,5 @@
+python=/home/smalldata411/python
+apps.py=/home/smalldata411/musicagg/myproject/apps.py
+tests.py=/home/smalldata411/musicagg/myproject/tests.py
+models.py=/home/smalldata411/musicagg/myproject/models.py
+views.py=/home/smalldata411/musicagg/myproject/views.py

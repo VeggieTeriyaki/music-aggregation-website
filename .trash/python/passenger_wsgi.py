@@ -1,0 +1,1 @@
+from python.wsgi import application
